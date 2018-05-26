@@ -2,9 +2,9 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Http\Resources\Json\Resource;
 
-class Article extends JsonResource
+class Article extends Resource
 {
     /**
      * Transform the resource into an array.
@@ -16,7 +16,6 @@ class Article extends JsonResource
     {
         // return parent::toArray($request);
 
-        //Without created by and at
         return [
             'id' => $this->id,
             'title' => $this->title,
@@ -27,7 +26,7 @@ class Article extends JsonResource
     public function with($request) {
         return [
             'version' => '1.0.0',
-            'author_url' => url('https://mirzasisic.com/')
+            'author_url' => url('https://mirzasisic.com')
         ];
     }
 }

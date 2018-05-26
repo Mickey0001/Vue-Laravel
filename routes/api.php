@@ -17,17 +17,19 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//List of all articles
+// List articles
 Route::get('articles', 'ArticleController@index');
 
-//List single articles
+// List single article
 Route::get('article/{id}', 'ArticleController@show');
 
-//Create a new article
+// Create new article
 Route::post('article', 'ArticleController@store');
 
-//Update an article
+// Update article
 Route::put('article', 'ArticleController@store');
 
-//Delete an article
+// Delete article
 Route::delete('article/{id}', 'ArticleController@destroy');
+
+

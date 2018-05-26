@@ -16,10 +16,10 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //Get some articles
-        $articles = Article::orderBy('created_at', 'desc')->paginate(10);
+        // Get articles
+        $articles = Article::orderBy('created_at', 'desc')->paginate(5);
 
-        //Return colletion of articles as a resource
+        // Return collection of articles as a resource
         return ArticleResource::collection($articles);
     }
 
@@ -39,8 +39,9 @@ class ArticleController extends Controller
         $article->body = $request->input('body');
 
         if($article->save()) {
-            return new ArticleResource($articles);
+            return new ArticleResource($article);
         }
+        
     }
 
     /**
@@ -51,10 +52,10 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //Get a single article
+        // Get article
         $article = Article::findOrFail($id);
 
-        //Return a single article as resource
+        // Return single article as a resource
         return new ArticleResource($article);
     }
 
@@ -66,11 +67,11 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-            //Get a single article
-            $article = Article::findOrFail($id);
+        // Get article
+        $article = Article::findOrFail($id);
 
-            if($article->delete()){
-                return new ArticleResource($article);
-            }
+        if($article->delete()) {
+            return new ArticleResource($article);
+        }    
     }
 }
