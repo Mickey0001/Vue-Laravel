@@ -17,7 +17,7 @@ class ArticleController extends Controller
     public function index()
     {
         //Get some articles
-        $articles = Article::orderBy('create_at', 'desc')->paginate(10);
+        $articles = Article::orderBy('created_at', 'desc')->paginate(10);
 
         //Return colletion of articles as a resource
         return ArticleResource::collection($articles);
@@ -39,7 +39,7 @@ class ArticleController extends Controller
         $article->body = $request->input('body');
 
         if($article->save()) {
-            return new ArticleResource($article);
+            return new ArticleResource($articles);
         }
     }
 
