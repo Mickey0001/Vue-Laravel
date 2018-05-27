@@ -43561,7 +43561,9 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("footer", { staticClass: "footer" }, [
       _c("nav", [
-        _c("p", { staticClass: "text-center" }, [_vm._v("©2018 Mirza Sisic")])
+        _c("small", { staticClass: "text-center" }, [
+          _vm._v("©2018 Mirza Sisic")
+        ])
       ])
     ])
   }
