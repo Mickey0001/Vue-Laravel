@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <nav>
-      <p class="text-center">©2018 Mirza Sisic</p>
+      <small class="text-center">©2018 Mirza Sisic</small>
     </nav>
   </footer>
 </template>
