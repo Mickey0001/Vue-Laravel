@@ -1,6 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-2">
-    <div class="container">
-    </div>
-  </nav>
+  <footer class="footer">
+    <nav>
+      <p class="text-center">©2018 Mirza Sisic</p>
+    </nav>
+  </footer>
 </template>

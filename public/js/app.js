@@ -1097,7 +1097,7 @@ window.Vue = __webpack_require__(36);
 
 Vue.component('navbar', __webpack_require__(39));
 Vue.component('articles', __webpack_require__(41));
-Vue.component('bottom', __webpack_require__(57));
+Vue.component('bottom', __webpack_require__(44));
 
 var app = new Vue({
   el: '#app'
@@ -43498,25 +43498,7 @@ if (false) {
 }
 
 /***/ }),
-/* 44 */,
-/* 45 */,
-/* 46 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -43524,7 +43506,7 @@ var normalizeComponent = __webpack_require__(3)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(58)
+var __vue_template__ = __webpack_require__(45)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -43563,7 +43545,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 58 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -43577,11 +43559,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "nav",
-      { staticClass: "navbar navbar-expand-sm navbar-dark bg-dark mb-2" },
-      [_c("div", { staticClass: "container" })]
-    )
+    return _c("footer", { staticClass: "footer" }, [
+      _c("nav", [
+        _c("p", { staticClass: "text-center" }, [_vm._v("©2018 Mirza Sisic")])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -43592,6 +43574,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-41981ee2", module.exports)
   }
 }
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
